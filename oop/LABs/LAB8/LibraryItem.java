@@ -12,13 +12,7 @@ public abstract class LibraryItem implements Comparable<LibraryItem> {
     public abstract void displayInfo();
 
     public int compareTo(LibraryItem other){
-        if (this.year > other.year) {
-            return 1;
-        } else if (this.year == other.year) {
-            return 0;
-        } else {
-            return -1;
-        }
+        return this.year - other.year;
     }
 
     public String getTitle() {
@@ -44,10 +38,4 @@ public abstract class LibraryItem implements Comparable<LibraryItem> {
     public void setYear(int year) {
         this.year = year;
     }
-
-    
-
-
-    
-
 }
